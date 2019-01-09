@@ -5,6 +5,7 @@ import akkgframework.model.Display;
 import akkgframework.control.fundamental.SoundController;
 import akkgframework.model.scenario.ScenarioController;
 import model.House;
+import model.Player;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern. Die updateProgram - Methode wird
@@ -16,6 +17,8 @@ public class ProgramController {
     private double programTimer;
 
     // Referenzen
+    private Player p1, p2;
+
     private UIController uiController;  // diese Referenz soll auf ein Objekt der Klasse uiController zeigen. Über dieses Objekt wird das Fenster gesteuert.
     private Display programmZeitAnzeige;
     private SoundController soundController;
@@ -35,10 +38,13 @@ public class ProgramController {
      * Diese Methode wird genau ein mal nach Programmstart aufgerufen.
      */
     public void startProgram() {
+
         programTimer = 0;
         // ******************************************* Ab hier euer eigener Code! *******************************************
-        House aHouse = new House();
-        uiController.registerObject(aHouse);
+        //House aHouse = new House();
+        //uiController.registerObject(aHouse);
+
+        p1 = new Player("Peter");
 
     }
 
