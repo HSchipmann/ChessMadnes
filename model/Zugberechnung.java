@@ -1,4 +1,4 @@
-package akkgframework.model;
+package model;
 
 public class Zugberechnung {
 
