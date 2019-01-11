@@ -82,12 +82,14 @@ public class Zugberechnung {
             }
             //---------------------------------------------------------------------------------------\\
             //turm
-            if (Schachbrett[turmX][turmY] != Schachnre){
+            if (Schachbrett[turmX][turmY] != Schachbrett[turmX][5]){
+                for(int i = bewegungspunkte;i > 0; i--){
+                    if (Schachbrett[0][i] != 0){
 
+                    }
+                }
             }
         }
-
-
         return output;
     }
 }
