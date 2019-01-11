@@ -15,4 +15,6 @@ public class Schachbrett {
         drawTool.drawImage(tileset.getTile(0,1),0,0);
     }
 
+
+
 }
