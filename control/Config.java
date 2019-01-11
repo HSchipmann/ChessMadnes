@@ -10,7 +10,7 @@ public class Config {
     public final static String WINDOW_TITLE = "Vorlage des grafischen Frameworks mit Einstiegsklasse";
 
     // Breite des Programmfensters (Width) und Höhe des Programmfensters (Height)
-    public final static int WINDOW_WIDTH = 1600;
+    public final static int WINDOW_WIDTH = 1500;
     public final static int WINDOW_HEIGHT = 1024;   // Effektive Höhe ist etwa 29 Pixel geringer (Titelleiste wird mitgezählt)
 
     // Schaltet die Infomeldungen des Frameworks an oder aus
