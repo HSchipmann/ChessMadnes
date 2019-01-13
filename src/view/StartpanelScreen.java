@@ -19,7 +19,7 @@ public class StartpanelScreen extends JFrame {
         setTitle("ChessMadnes");
         setSize(900,900);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
+//f
 
         startButton.addActionListener(new ActionListener() {
             @Override
