@@ -7,13 +7,18 @@ import java.awt.event.ActionListener;
 
 public class StartPanel {
 
-    public StartPanel(MainView mainview) {
-        StartpanelScreen startpanelScreen = new StartpanelScreen();
-        startpanelScreen.pack();
-        startpanelScreen.setVisible(true);
-
+    public StartPanel(MainView mainview){
+            createButtons();
+            this.mainView = mainView;
     }
 
+    public JPanel getPanel(){
+        return panel;
+    }
+
+    public createButtons(){
+
+    }
 
     public void startGameClicked(){
         String name = textField1.getText();

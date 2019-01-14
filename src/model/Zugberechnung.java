@@ -10,20 +10,25 @@ public class Zugberechnung {
     private int turmX;
     private int turmY;
 
-    public Zugberechnung(int pbewegungsPunkte){
-        bewegungspunkte = pbewegungsPunkte;
-        koenigX = 1;
-        koenigY = 1;
+    public Zugberechnung(int pBewegungspunkte, int pKoenigX, int pKoenigY, int pTurmX, int pTurmY){
+        bewegungspunkte = pBewegungspunkte;
+
         Schachbrett = new int[5][5];
+
+        koenigX = pKoenigX;
+        koenigY = pKoenigY;
+
+        turmX = pTurmX;
+        turmY = pTurmY;
 
         koenigMoved = false;
     }
     public boolean[][] run(){
         boolean[][] output;
-        output = new boolean [1][7];
+        output = new boolean [2][7];
 
-        if (bewegungspunkte > 0){
-            if(!koenigMoved) {
+        if (bewegungspunkte > 0) {
+            if (!koenigMoved) {
                 //koenig hoch runter links rechts
                 //koenig
                 if (Schachbrett[koenigX][koenigY] != Schachbrett[koenigX][5]) {
@@ -80,13 +85,36 @@ public class Zugberechnung {
                     }
                 }
             }
+        }
             //---------------------------------------------------------------------------------------\\
             //turm
+<<<<<<< Updated upstream
+        if (bewegungspunkte > 0) {
+            if (Schachbrett[turmX][turmY] != Schachbrett[turmX][5]) {
+                if (Schachbrett[0][bewegungspunkte] != 0) {
+                    output[1][0] = true;
+                }
+            }
+            if (Schachbrett[turmX][turmY] != Schachbrett[turmX][0]) {
+                if (Schachbrett[0][bewegungspunkte] != 0) {
+                    output[1][1] = true;
+                }
+            }
+            if (Schachbrett[turmX][turmY] != Schachbrett[5][turmY]) {
+                if (Schachbrett[0][bewegungspunkte] != 0) {
+                    output[1][2] = true;
+                }
+            }
+            if (Schachbrett[turmX][turmY] != Schachbrett[0][turmY]) {
+                if (Schachbrett[0][bewegungspunkte] != 0) {
+                    output[1][3] = true;
+=======
             if (Schachbrett[turmX][turmY] != Schachbrett[turmX][5]){
                 for(int i = bewegungspunkte;i > 0; i--){
                     if (Schachbrett[0][i] != 0){
-                        //hämry stinkt
+
                     }
+>>>>>>> Stashed changes
                 }
             }
         }
