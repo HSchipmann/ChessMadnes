@@ -10,11 +10,16 @@ public class Zugberechnung {
     private int turmX;
     private int turmY;
 
-    public Zugberechnung(int pbewegungsPunkte){
-        bewegungspunkte = pbewegungsPunkte;
-        koenigX = 1;
-        koenigY = 1;
+    public Zugberechnung(int pBewegungspunkte, int pKoenigX, int pKoenigY, int pTurmX, int pTurmY){
+        bewegungspunkte = pBewegungspunkte;
+
         Schachbrett = new int[5][5];
+
+        koenigX = pKoenigX;
+        koenigY = pKoenigY;
+
+        turmX = pTurmX;
+        turmY = pTurmY;
 
         koenigMoved = false;
     }
