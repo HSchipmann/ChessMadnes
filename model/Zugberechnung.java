@@ -85,7 +85,7 @@ public class Zugberechnung {
             if (Schachbrett[turmX][turmY] != Schachbrett[turmX][5]){
                 for(int i = bewegungspunkte;i > 0; i--){
                     if (Schachbrett[0][i] != 0){
-                        //hämry stinkt
+                        //hämry stinkt immer noch
                     }
                 }
             }
