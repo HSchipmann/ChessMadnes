@@ -18,6 +18,13 @@ public class Highscore {
 
     }
 
+    public boolean getWinnerName(String name){
+        if (gameEnd(true)) {
+            name= new winnerName;
+            return name;
+        }
+    }
+
     public boolean sort(int index){
         List<Score> list = allScores[index];
         List<Score> sorted = new List<>();

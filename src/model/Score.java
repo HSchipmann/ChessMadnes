@@ -1,5 +1,7 @@
 package model;
 
+import control.Highscore;
+
 public class Score {
     private String name;
     private String wins;
@@ -10,14 +12,15 @@ public class Score {
     }
 
     public String getName(){
+        name = Highscore.getWinnerName(name);
         return name;
     }
 
-    public String getWins(){
+    public String getWin(){
         return wins;
     }
 
-    public void setWins(String wins){
+    public void setWin(String wins){
         this.wins = wins;
     }
 }
