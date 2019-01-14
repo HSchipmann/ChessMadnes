@@ -1,5 +1,5 @@
 package control;
-import Model.List;
+
 
 import akkgframework.control.fundamental.MainController;
 
@@ -10,15 +10,13 @@ import java.lang.reflect.Field;
 
 public class Highscore {
 
-    private List<Score>[] allScores;
+    private List<Score> allScores;
 
-    public Highscore(){
-        allScores = new List[10];
-        allScores[0] = new List<Score>();
-
+    public Highscore() {
+        allScores = new List<Score>();
     }
 
-    public boolean sort(int index){
+    /*public boolean sort(int index){
         List<Score> list = allScores[index];
         List<Score> sorted = new List<>();
         list.toFirst();
@@ -41,5 +39,5 @@ public class Highscore {
         }
         allScores[index] = sorted;
         return true;
-    }
+    }*/
 }

@@ -88,6 +88,7 @@ public class Zugberechnung {
         }
             //---------------------------------------------------------------------------------------\\
             //turm
+<<<<<<< Updated upstream
         if (bewegungspunkte > 0) {
             if (Schachbrett[turmX][turmY] != Schachbrett[turmX][5]) {
                 if (Schachbrett[0][bewegungspunkte] != 0) {
@@ -107,6 +108,13 @@ public class Zugberechnung {
             if (Schachbrett[turmX][turmY] != Schachbrett[0][turmY]) {
                 if (Schachbrett[0][bewegungspunkte] != 0) {
                     output[1][3] = true;
+=======
+            if (Schachbrett[turmX][turmY] != Schachbrett[turmX][5]){
+                for(int i = bewegungspunkte;i > 0; i--){
+                    if (Schachbrett[0][i] != 0){
+
+                    }
+>>>>>>> Stashed changes
                 }
             }
         }
