@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
 
-//efi Efi >Eif Efi efio
+//efi Efi >Eif Efi efiooooo
 public class StartpanelScreen extends JFrame {
     private JButton startButton;
     private JTextArea Player1Name;
