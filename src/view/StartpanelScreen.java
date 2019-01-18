@@ -1,5 +1,5 @@
 package view;
-import jdk.jshell.Snippet;
+//import jdk.jshell.Snippet;eff
 import model.Player;
 
 import javax.swing.*;
@@ -18,14 +18,14 @@ public class StartpanelScreen extends JFrame {
         add(Startpanel);
         setTitle("ChessMadnes");
         setSize(900,900);
+        setVisible(true);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-//f
-
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                player1Label.setText(Player1Name.getText());
-                player2Label.setText(Player2Name.getText());
+                System.exit(0);
+                //player1Label.setText(Player1Name.getText());
+                //player2Label.setText(Player2Name.getText());
             }
         });
     }

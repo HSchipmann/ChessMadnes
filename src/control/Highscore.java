@@ -1,5 +1,6 @@
 package control;
-import Model.List;
+//import Model.List;
+//Efi Efi Efi Efi Efi Efi
 
 import akkgframework.control.fundamental.MainController;
 
@@ -29,9 +30,9 @@ public class Highscore {
             list.toFirst();
             Score score = list.getContent();
             sorted.toFirst();
-            while(sorted.hasAcces() && sorted.getContent().getName().compareTo(score.getWin())) < 0){
-                sorted.next();
-            }
+            //while(sorted.hasAcces() && sorted.getContent().getName().compareTo(score.getWin())) < 0){
+          //      sorted.next();
+          //  }
             if (sorted.hasAccess()) {
                 sorted.insert(score);
             }else{
