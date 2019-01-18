@@ -14,7 +14,6 @@ public class MainView extends JFrame{
         this.setBounds(50,50,1230,700);
         this.setTitle("Chess Madness");
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setContentPane(new StartPanel(controller).getPanel());
         this.setVisible(true);
     }
 }
