@@ -11,9 +11,6 @@ import javax.swing.*;
 public class MainView extends JFrame{
 
     public MainView(MainController controller){
-        this.setBounds(50,50,1230,700);
-        this.setTitle("Chess Madness");
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setVisible(true);
+        StartpanelScreen myGuiForm = new StartpanelScreen();
     }
 }

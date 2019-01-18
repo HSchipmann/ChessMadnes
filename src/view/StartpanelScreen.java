@@ -24,7 +24,8 @@ public class StartpanelScreen extends JFrame {
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                player1Label.setText(Player1Name.getText());
+                player2Label.setText(Player2Name.getText());
             }
         });
     }

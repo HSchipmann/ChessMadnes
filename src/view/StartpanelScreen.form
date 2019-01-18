@@ -24,7 +24,9 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <foreground color="-16777216"/>
+        </properties>
       </component>
       <component id="50621" class="javax.swing.JTextArea" binding="Player2Name">
         <constraints>
@@ -34,6 +36,7 @@
         </constraints>
         <properties>
           <background color="-16777216"/>
+          <foreground color="-1"/>
         </properties>
       </component>
     </children>
