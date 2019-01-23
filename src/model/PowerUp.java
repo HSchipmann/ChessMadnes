@@ -1,16 +1,23 @@
 package model;
 
+
 public class PowerUp {
 
     private String img;
     private String type;
     private int x;
     private int y;
+    private Schachbrett schachbrett;
 
 
     public PowerUp(){
-        x=(int)Math.random()*5;
-        y=(int)Math.random()*5;
+        for(boolean placeFound; placeFound = false;){
+            x = (int) Math.random() * 5;
+            y = (int) Math.random() * 5;
+            if(schachbrett.mapArray[x][y] == 0){
+                placeFound = true;
+            }
+        }
         randomType();
     }
 

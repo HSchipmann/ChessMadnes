@@ -4,6 +4,9 @@ public class Rook extends Piece {
 
     public Rook(int x,int y, String color){
         assignColor();
+        this.x = x;
+        this.y = y;
+        this.color = color;
     }
 
     public void moveKing(int inX, int inY){
@@ -13,9 +16,9 @@ public class Rook extends Piece {
 
     public void assignColor(){
         if (color.equals("White")){
-            img = "assets/WhiteRook.png";
+            img = "assets/WhiteKing.png";
         }else{
-            img = "assets/BlackRook.png";
+            img = "assets/BlackKing.png";
         }
     }
 }
