@@ -8,7 +8,7 @@ public class PowerUp {
     private int y;
 
 
-    public PowerUp(String type,int x, int y){
+    public PowerUp(String type){
         this.type=type;
     }
 
