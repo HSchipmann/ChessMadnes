@@ -9,11 +9,7 @@ public class Score {
         this.wins = wins;
     }
 
-<<<<<<< Updated upstream
     public String getName(){
-=======
-    public String getName() {
->>>>>>> Stashed changes
         return name;
     }
 
