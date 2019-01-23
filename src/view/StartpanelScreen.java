@@ -1,5 +1,5 @@
 package view;
-import jdk.jshell.Snippet;
+import jdk.jshell.Snippet; //wat?
 import model.Player;
 
 import javax.swing.*;
@@ -24,9 +24,8 @@ public class StartpanelScreen extends JFrame {
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                /*player1Label.setText(Player1Name.getText());
-                player2Label.setText(Player2Name.getText());*/
+                player1Label.setText(Player1Name.getText());
+                player2Label.setText(Player2Name.getText());
             }
         });
     }

@@ -2,31 +2,21 @@ package model;
 
 public class PowerUp {
 
-    private String type;
-    private String img;
+    protected String img;
     private int x;
     private int y;
 
 
-    public PowerUp(String type){
-        this.type=type;
+    public PowerUp(){
+        addToBoard();
     }
 
-    public void addToBoard(){
-        x=(int)Math.random()*6+1;
-        y=(int)Math.random()*6+1;
+    private void addToBoard(){
+        x=(int)Math.random()*5;
+        y=(int)Math.random()*5;
     }
 
-    public void createImage(){
-        if(type=="+1"){
-
-        }
-        if(type=="skip"){
-
-        }
-        if(type=="swap"){
-
-        }
+    public String getImg(){
+        return img;
     }
-
 }

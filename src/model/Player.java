@@ -4,6 +4,7 @@ public class Player {
 
     //Attribute
     private String myName;
+    public int bewegungspunkte;
 
     //Referenzen
 
