@@ -22,12 +22,9 @@ public class PowerUp {
         int r =0;
         r=(int)Math.random()*2;
         if(r==0){
-            type="+1";
-            //BIld hier erstellen
-        }else if(r==2){
             type="freeze";
             //BIld hier erstellen
-        }else{
+        }else if(r==2){
             type="teleport";
             //BIld hier erstellen
         }
