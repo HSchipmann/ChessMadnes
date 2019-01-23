@@ -7,6 +7,7 @@ public class QueueManager {
     private PowerUp powerUp;
     private Queue<PowerUp> powerUpQueue;
 
+    //fügt ein neues random PowerUp in die Queue
     public String addNewPowerUp(){
         PowerUp powerUp = new PowerUp();
         powerUpQueue.enqueue(powerUp);
@@ -14,6 +15,8 @@ public class QueueManager {
         return powerUp.getImage();
     }
 
+
+    //Entfernt das erste PowerUp aus der Queue und returnt es danach
     public PowerUp realesePowerUp(){
         PowerUp topPowerup= powerUpQueue.front();
         if(!powerUpQueue.isEmpty()){
