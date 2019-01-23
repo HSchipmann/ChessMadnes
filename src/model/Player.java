@@ -8,7 +8,6 @@ public class Player {
 
     //Referenzen
 
-
     //Methoden
     public Player(String name){
         myName = name;
