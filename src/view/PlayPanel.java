@@ -2,7 +2,11 @@ package view;
 
 import akkgframework.view.DrawingPanel;
 
-public class PlayPanel extends DrawingPanel {
+import javax.swing.*;
+import model.Schachbrett;
+import akkgframework.control.fundamental.MainController;
 
-    //nächste Stunde Panel
+public class PlayPanel extends JFrame{
+
+
 }

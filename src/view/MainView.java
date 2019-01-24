@@ -2,6 +2,7 @@ package view;
 
 
 import akkgframework.control.fundamental.MainController;
+import model.Schachbrett;
 
 import javax.swing.*;
 
@@ -12,5 +13,6 @@ public class MainView extends JFrame{
 
     public MainView(MainController controller){
         StartpanelScreen myGuiForm = new StartpanelScreen();
+        SchachbrettPanel drawTool = new SchachbrettPanel();
     }
 }

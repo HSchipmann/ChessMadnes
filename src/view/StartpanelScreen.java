@@ -1,6 +1,7 @@
 package view;
 //import jdk.jshell.Snippet; //wat?
 import model.Player;
+import model.Schachbrett;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -24,7 +25,10 @@ public class StartpanelScreen extends JFrame {
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                setVisible(false);
+                SchachbrettPanel
+                        label
+                        öabel
             }
         });
     }
