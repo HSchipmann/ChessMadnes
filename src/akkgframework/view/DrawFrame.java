@@ -94,5 +94,6 @@ public class DrawFrame extends JFrame {
         if ( panels.get(index) != null) return panels.get(index);
         return null;
     }
+
 }
 

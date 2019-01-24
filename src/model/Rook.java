@@ -1,12 +1,13 @@
 package model;
 
+import akkgframework.view.DrawTool;
+
 public class Rook extends Piece {
 
     public Rook(int x,int y, String color){
-        assignColor();
+        assignColor(color);
         this.x = x;
         this.y = y;
-        this.color = color;
     }
 
     public void moveKing(int inX, int inY){
@@ -14,11 +15,15 @@ public class Rook extends Piece {
         y = y + inY;
     }
 
-    public void assignColor(){
+    public void assignColor(String color){
         if (color.equals("White")){
-            img = "assets/WhiteKing.png";
+            createAndSetNewImage("src/assets/WhiteRook.png");
         }else{
-            img = "assets/BlackKing.png";
+            createAndSetNewImage("src/assets/BlackRook.png");
         }
+    }
+
+    public void draw(DrawTool drawTool){
+        drawTool.drawImage(getMyImage(),x,y);
     }
 }

@@ -5,16 +5,20 @@ import akkgframework.model.fundamental.GraphicalObject;
 import akkgframework.model.fundamental.Tileset;
 import akkgframework.view.DrawTool;
 
+import java.awt.image.BufferedImage;
+
 public class Schachbrett extends GraphicalObject {
 
-    private Tileset tileset;
+    public Tileset tileset;
     public int[][] mapArray;
+    private BufferedImage image;
 
 
     public Schachbrett(){
         //tileset benutzen um Bild einfach zu zeichnen
-        tileset = new Tileset("src/assets/whiteTile.png",150,150);
+        mapArray=new int[5][5];
         createMapArray();
+        createAndSetNewImage("src/assets/Tilefertig.png");
     }
 
     //Map erstellen in der kein Platz belegt ist
@@ -31,6 +35,11 @@ public class Schachbrett extends GraphicalObject {
     public int[][] changeMapArray(){
 
         return null;
+    }
+
+    public void draw(DrawTool drawTool){
+        drawTool.drawFilledRectangle(0,0,2000,2000);
+        drawTool.drawImage(getMyImage(),300,85);
     }
 
 

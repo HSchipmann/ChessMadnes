@@ -3,6 +3,8 @@ package akkgframework.control.fundamental;
 import akkgframework.control.fundamental.UIController;
 import control.Config;
 import akkgframework.view.DrawFrame;
+import view.SchachbrettPanel;
+
 import java.awt.*;
 
 /**
@@ -24,8 +26,8 @@ public class MainController {
      */
     public MainController(){
         if ( Config.INFO_MESSAGES) System.out.println("  > MainController: Ich wurde erzeugt. Erstelle Fenster (Drawframe-Objekt)...");
-        // Berechne Mitte des Bildschirms
-        /*GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+        //Berechne Mitte des Bildschirms
+        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         int width = gd.getDisplayMode().getWidth();
         int height = gd.getDisplayMode().getHeight();
         int x = width / 2;
@@ -38,7 +40,8 @@ public class MainController {
         drawFrame.setResizable(false);
         // Übergibt den weiteren Programmfluss an das neue Objekt der Klasse UIController
         if ( Config.INFO_MESSAGES) System.out.println("  > MainController: Erzeuge UIController und übergebe Drawframe-Objekt-Referenz.");
-        new UIController(drawFrame);*/
+        new UIController(drawFrame);
+
     }
 
 }

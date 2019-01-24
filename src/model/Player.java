@@ -1,10 +1,14 @@
 package model;
 
-public class Player {
+import akkgframework.model.fundamental.GraphicalObject;
+import akkgframework.view.DrawTool;
+
+public class Player extends GraphicalObject {
 
     //Attribute
     private String myName;
     public int bewegungspunkte;
+
 
     //Referenzen
 
@@ -21,5 +25,9 @@ public class Player {
 
     public void setMyName(String myName) {
         this.myName = myName;
+    }
+
+    public void draw(DrawTool drawTool){
+        drawTool.drawText(x,y,myName);
     }
 }
