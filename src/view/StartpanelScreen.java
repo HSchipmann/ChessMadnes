@@ -25,17 +25,15 @@ public class StartpanelScreen extends JFrame {
         setDefaultCloseOperation(0);
         setResizable(false);
         setAlwaysOnTop(true);
-        setLocation(500,100);
-
-//f
+        setLocation(675,450);
 
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                schachbrettPanel.player1Label.setText(Player1Name.getText());
+                /*schachbrettPanel.player1Label.setText(Player1Name.getText());
                 schachbrettPanel.player2Label.setText(Player2Name.getText());
-                SchachbrettPanel schachbrettPanel = new SchachbrettPanel();
+                SchachbrettPanel schachbrettPanel = new SchachbrettPanel();*/
             }
         });
 
