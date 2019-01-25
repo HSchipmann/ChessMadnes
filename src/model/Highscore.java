@@ -25,8 +25,8 @@ public class Highscore <Contenttyp> {
     //Hier drin schreibt man ins Dokument
     public void writeToFile(String textLine) throws IOException{
         //Erlaubt eine sicheren und richtien Aufruf und speichern (in Bytes) vom Text ins TextDoc
-            FileWriter write = new FileWriter(path, appendToFile);
-            // Wenn es kein TextDoc existiert wird eins erstellt
+        FileWriter write = new FileWriter(path, appendToFile);
+        // Wenn es kein TextDoc existiert wird eins erstellt
         PrintWriter printline = new PrintWriter(write);
         //%s ist der Text von belibiger größe. %n ist eine neue Line die am ende erstellt wird
         printline.printf("%s"+"%n", textLine);
