@@ -41,9 +41,4 @@ public class Schachbrett extends GraphicalObject {
         drawTool.drawFilledRectangle(0,0,2000,2000);
         drawTool.drawImage(getMyImage(),300,85);
     }
-
-
-
-
-
 }
