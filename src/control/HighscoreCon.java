@@ -1,19 +1,19 @@
 package control;
-//import Model.List;
 //Efi Efi Efi Efi Efi Efi
 
 import akkgframework.control.fundamental.MainController;
 
 import akkgframework.model.abitur.datenstrukturen.List;
 import model.Score;
+import model.Highscore;
 
 import java.lang.reflect.Field;
 
-public class Highscore {
+public class HighscoreCon {
 
-    private List<Score>[] allScores;
+    public List<Score>[] allScores;
 
-    public Highscore(){
+    public HighscoreCon(){
         allScores = new List[10];
         allScores[0] = new List<Score>();
 

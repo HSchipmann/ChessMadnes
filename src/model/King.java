@@ -1,5 +1,7 @@
 package model;
 
+import akkgframework.view.DrawTool;
+
 public class King extends Piece {
 
     public King(int x,int y, String color){
@@ -16,9 +18,13 @@ public class King extends Piece {
 
     public void assignColor(){
         if (color.equals("White")){
-            img = "assets/WhiteRook.png";
+            createAndSetNewImage("assets/WhiteKing.png");
         }else{
-            img = "assets/BlackRook.png";
+            createAndSetNewImage("assests/BlackKing.png");
         }
+    }
+
+    public void draw(DrawTool drawTool){
+        drawTool.drawImage(getMyImage(),x,y);
     }
 }
