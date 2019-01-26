@@ -31,6 +31,7 @@ public class StartpanelScreen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
+                HighscorePanel myGuiForm = new HighscorePanel();
                 /*schachbrettPanel.player1Label.setText(Player1Name.getText());
                 schachbrettPanel.player2Label.setText(Player2Name.getText());
                 SchachbrettPanel schachbrettPanel = new SchachbrettPanel();*/

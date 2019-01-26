@@ -15,7 +15,7 @@ public class MainProgramm {
     //falls was schief läuft ist try...catch da, um eine passende error Naricht zu senden.
     public static void main(String[] args) throws IOException {
         new MainView(new MainController());
-        String filename = "C:/test.txt";
+        /*String filename = "C:/test.txt";
         try {
             ReadFile file = new ReadFile(filename);
             String[] aryLines = file.OpenFile();
@@ -30,5 +30,6 @@ public class MainProgramm {
         WriteFile data = new WriteFile(filename,true);
         Highscore.writeToFile(""+);
         System.out.println("Score Written To");
+        */
     }
 }

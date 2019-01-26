@@ -31,7 +31,7 @@ public class ReadFile {
         return textData;
     }
 
-    int readLines() throws IOException{
+    public int readLines() throws IOException{
         FileReader fileToRead = new FileReader(path);
         BufferedReader bf = new BufferedReader(fileToRead);
 

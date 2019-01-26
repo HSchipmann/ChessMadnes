@@ -186,7 +186,4 @@ public class Highscore <Contenttyp> {
         }
     }
 
-    public ListNode saveTheScore() {
-
-    }
 }
