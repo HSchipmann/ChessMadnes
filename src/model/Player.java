@@ -29,6 +29,8 @@ public class Player extends GraphicalObject {
     }
 
     public void draw(DrawTool drawTool){
+        drawTool.formatText("",1,20);
+        drawTool.setCurrentColor(0,0,100,255);
         drawTool.setCurrentColor(255,255,255,255);
         drawTool.drawText(x,y,myName);
     }

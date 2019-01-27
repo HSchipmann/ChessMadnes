@@ -17,7 +17,7 @@ public class QueueManager {
     public String addNewPowerUp(){
         powerUp = new PowerUp(schachbrett);
         powerUpQueue.enqueue(powerUp);
-        System.out.println("Neues PowerUp hinzugefügt");
+        System.out.println("New PowerUp has been added");
         return powerUp.getImage();
     }
 

@@ -152,13 +152,23 @@ public class ProgramController {
                     activePowerUp=false;
                 }
             }else if(powerUp.getType().equals("swap")){
-                if(schachbrett.getWmoved()){
+                if(schachbrett.getWmoved()&&whiterook.getX()!=-200){
                     swap(whiteking,whiterook);
                     uiController.removeObject(powerUp);
                     powerUp.setX(-2000);
                     activePowerUp=false;
-                }else {
+                }else if(schachbrett.getBmoved()&&blackrook.getX()!=-200){
                     swap(blackking,blackrook);
+                    uiController.removeObject(powerUp);
+                    powerUp.setX(-2000);
+                    activePowerUp=false;
+                }else if(whiterook.getX()==-200){
+                    swap(object1,blackking);
+                    uiController.removeObject(powerUp);
+                    powerUp.setX(-2000);
+                    activePowerUp=false;
+                }else if(blackrook.getX()==-200){
+                    swap(object1,whiteking);
                     uiController.removeObject(powerUp);
                     powerUp.setX(-2000);
                     activePowerUp=false;
