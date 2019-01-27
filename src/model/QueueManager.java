@@ -6,14 +6,16 @@ public class QueueManager {
 
     private PowerUp powerUp;
     private Queue<PowerUp> powerUpQueue;
+    private Schachbrett schachbrett;
 
-    public QueueManager(){
-        powerUpQueue = new Queue<>();
+    public QueueManager(Schachbrett schachbrett){
+        powerUpQueue = new Queue<PowerUp>();
+        this.schachbrett=schachbrett;
     }
 
     //fügt ein neues random PowerUp in die Queue
     public String addNewPowerUp(){
-        powerUp = new PowerUp();
+        powerUp = new PowerUp(schachbrett);
         powerUpQueue.enqueue(powerUp);
         System.out.println("Neues PowerUp hinzugefügt");
         return powerUp.getImage();

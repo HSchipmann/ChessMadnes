@@ -1,4 +1,4 @@
-package model;
+
 
 import akkgframework.control.fundamental.MainController;
 import akkgframework.model.abitur.datenstrukturen.List;

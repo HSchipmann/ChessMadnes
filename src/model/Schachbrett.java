@@ -183,6 +183,14 @@ public class Schachbrett extends GraphicalObject {
         return wmoved;
     }
 
+    public void setWmoved(boolean b){
+        wmoved=b;
+    }
+
+    public void setBmoved(boolean b){
+        bmoved=b;
+    }
+
 
 
 }

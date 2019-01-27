@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="804.75" y="918.0">model.Schachbrett</node>
+    <node x="1472.0" y="2185.0">view.MainView</node>
+    <node x="2050.0" y="1647.0">akkgframework.view.DrawFrame</node>
+    <node x="998.0" y="1861.0">akkgframework.model.abitur.datenstrukturen.Stack.StackNode</node>
+    <node x="1250.0" y="2185.0">model.Score</node>
+    <node x="1913.75" y="191.0">model.Highscore.ListNode</node>
+    <node x="1924.75" y="0.0">model.Highscore</node>
+    <node x="437.75000000000006" y="1128.0">model.Piece</node>
+    <node x="2194.75" y="0.0">akkgframework.model.abitur.datenstrukturen.List</node>
+    <node x="0.0" y="1647.0">akkgframework.view.DrawingPanel</node>
+    <node x="2215.25" y="412.0">akkgframework.model.abitur.datenstrukturen.List.ListNode</node>
+    <node x="1019.0" y="2185.0">view.HighscorePanel</node>
+    <node x="587.75" y="1083.0">model.PowerUp</node>
+    <node x="1116.75" y="1116.0">model.Player</node>
+    <node x="1002.0" y="1647.0">akkgframework.model.abitur.datenstrukturen.Stack</node>
+    <node x="2148.0" y="2185.0">control.ReadFile</node>
+    <node x="0.0" y="1050.5">akkgframework.control.fundamental.SoundController</node>
+    <node x="693.5" y="0.0">akkgframework.view.DrawableObject</node>
+    <node x="237.0" y="2185.0">model.QueueManager</node>
+    <node x="0.0" y="2185.0">view.StartpanelScreen</node>
+    <node x="298.00000000000006" y="1484.0">model.Rook</node>
+    <node x="679.5" y="343.0">akkgframework.model.fundamental.GraphicalObject</node>
+    <node x="1545.75" y="0.0">control.ProgramController</node>
+    <node x="1729.0" y="2185.0">MainProgramm</node>
+    <node x="1943.0" y="2185.0">akkgframework.control.fundamental.MainController</node>
+    <node x="514.0" y="1484.0">model.King</node>
+    <node x="735.0" y="1647.0">akkgframework.model.abitur.datenstrukturen.Queue</node>
+    <node x="1249.0" y="1647.0">akkgframework.view.DrawTool</node>
+    <node x="1320.75" y="1127.5">model.EndScreen</node>
+    <node x="737.5" y="1883.0">akkgframework.model.abitur.datenstrukturen.Queue.QueueNode</node>
+    <node x="351.0" y="1647.0">akkgframework.control.fundamental.UIController</node>
+    <node x="1746.0" y="1647.0">model.Zugberechnung</node>
+    <node x="23.0" y="1484.0">akkgframework.control.fundamental.SoundController.SoundData</node>
+    <node x="785.0" y="2185.0">control.HighscoreCon</node>
+    <node x="536.0" y="2185.0">control.Config</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.PowerUp" target="akkgframework.model.fundamental.GraphicalObject">
+      <point x="0.0" y="-93.0" />
+      <point x="686.25" y="898.0" />
+      <point x="795.3333333333334" y="898.0" />
+      <point x="-23.16666666666663" y="257.5" />
+    </edge>
+    <edge source="model.Player" target="akkgframework.model.fundamental.GraphicalObject">
+      <point x="0.0" y="-60.0" />
+      <point x="1208.75" y="888.0" />
+      <point x="888.0" y="888.0" />
+      <point x="69.5" y="257.5" />
+    </edge>
+    <edge source="akkgframework.model.abitur.datenstrukturen.Stack.StackNode" target="akkgframework.model.abitur.datenstrukturen.Stack">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="82.0" />
+    </edge>
+    <edge source="akkgframework.model.abitur.datenstrukturen.List.ListNode" target="akkgframework.model.abitur.datenstrukturen.List">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="181.0" />
+    </edge>
+    <edge source="model.Piece" target="akkgframework.model.fundamental.GraphicalObject">
+      <point x="0.0" y="-48.0" />
+      <point x="502.75000000000006" y="888.0" />
+      <point x="749.0" y="888.0" />
+      <point x="-69.5" y="257.5" />
+    </edge>
+    <edge source="akkgframework.model.abitur.datenstrukturen.Queue.QueueNode" target="akkgframework.model.abitur.datenstrukturen.Queue">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="93.0" />
+    </edge>
+    <edge source="akkgframework.control.fundamental.SoundController.SoundData" target="akkgframework.control.fundamental.SoundController">
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="125.5" />
+    </edge>
+    <edge source="model.Rook" target="model.Piece">
+      <point x="0.0" y="-59.0" />
+      <point x="396.00000000000006" y="1459.0" />
+      <point x="470.25000000000006" y="1459.0" />
+      <point x="-32.5" y="48.0" />
+    </edge>
+    <edge source="model.King" target="model.Piece">
+      <point x="0.0" y="-59.0" />
+      <point x="609.5" y="1459.0" />
+      <point x="535.25" y="1459.0" />
+      <point x="32.5" y="48.0" />
+    </edge>
+    <edge source="model.Highscore.ListNode" target="model.Highscore">
+      <point x="0.0" y="-203.0" />
+      <point x="0.0" y="70.5" />
+    </edge>
+    <edge source="akkgframework.control.fundamental.SoundController" target="akkgframework.model.fundamental.GraphicalObject">
+      <point x="0.0" y="-125.5" />
+      <point x="150.5" y="878.0" />
+      <point x="702.6666666666666" y="878.0" />
+      <point x="-115.83333333333337" y="257.5" />
+    </edge>
+    <edge source="model.Schachbrett" target="akkgframework.model.fundamental.GraphicalObject">
+      <point x="0.0" y="-258.0" />
+      <point x="950.75" y="898.0" />
+      <point x="841.6666666666667" y="898.0" />
+      <point x="23.166666666666742" y="257.5" />
+    </edge>
+    <edge source="akkgframework.model.fundamental.GraphicalObject" target="akkgframework.view.DrawableObject">
+      <point x="0.0" y="-257.5" />
+      <point x="0.0" y="146.5" />
+    </edge>
+    <edge source="model.EndScreen" target="akkgframework.model.fundamental.GraphicalObject">
+      <point x="0.0" y="-48.5" />
+      <point x="1410.75" y="878.0" />
+      <point x="934.3333333333334" y="878.0" />
+      <point x="115.83333333333337" y="257.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.11304757418747056" x="6210.0" y="2515.4854166666664" />
+  <SelectedNodes>
+    <node>model.Schachbrett</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

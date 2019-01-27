@@ -8,18 +8,17 @@ public class PowerUp extends GraphicalObject {
 
     private String img;
     private String type;
-    private int x;
-    private int y;
     private Schachbrett schachbrett;
     private boolean placeFound;
 
 
-    public PowerUp(){
-        while(placeFound = false){
-            x = (int) (Math.random() * 3)+2*150+300;
-            y = (int) (Math.random() * 3)+2*150+85;
-            if(schachbrett.getCollision(x,y)){
-                placeFound = true;
+    public PowerUp(Schachbrett schachbrett){
+        this.schachbrett=schachbrett;
+        while(!placeFound){
+            x = (int) (Math.random() * 6)*150+300;
+            y = (int) (Math.random() * 6)*150+85;
+            if(!schachbrett.getCollision((int)x,(int)y)){
+                placeFound=true;
             }
         }
         randomType();
@@ -43,6 +42,10 @@ public class PowerUp extends GraphicalObject {
 
     public void draw(DrawTool drawTool){
         drawTool.drawImage(getMyImage(),x,y);
+    }
+
+    public String getType(){
+        return type;
     }
 
 

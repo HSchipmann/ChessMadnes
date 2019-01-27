@@ -3,6 +3,7 @@ package control;
 import akkgframework.control.fundamental.UIController;
 import akkgframework.model.Display;
 import akkgframework.control.fundamental.SoundController;
+import akkgframework.model.abitur.datenstrukturen.Graph;
 import akkgframework.model.fundamental.GraphicalObject;
 import akkgframework.model.scenario.ScenarioController;
 import akkgframework.view.DrawFrame;
@@ -38,6 +39,7 @@ public class ProgramController {
     private QueueManager queueManager;
     private EndScreen endScreen;
     private PowerUp powerUp;
+    private boolean activePowerUp;
 
 
     public ProgramController(UIController uiController){
@@ -46,11 +48,11 @@ public class ProgramController {
 
 
     public void startProgram() {
-        poweruptimer=(int)(Math.random()*120)+30;
+        poweruptimer=0;
         programTimer = 0;
 
         player1 = new Player("Weiß",50,150);
-        player2 = new Player("Schwartz",50,900);
+        player2 = new Player("Schwarz",50,900);
 
 
         whiterook = new Rook(300,85,"White");
@@ -60,7 +62,7 @@ public class ProgramController {
         whiteking = new King(450,85,"White");
         blackking = new King(900,835,"Snoop Dog");
 
-        queueManager = new QueueManager();
+
         schachbrett = new Schachbrett(whiteking,blackking,whiterook,blackrook);
         uiController.registerObject(schachbrett);
         uiController.registerObject(whiterook);
@@ -69,18 +71,20 @@ public class ProgramController {
         uiController.registerObject(whiteking);
         uiController.registerObject(player1);
         uiController.registerObject(player2);
-
+        queueManager = new QueueManager(schachbrett);
     }
 
 
     public void updateProgram(double dt){
         programTimer += dt;
         poweruptimer -=dt;
-        if(poweruptimer<=0){
+
+        if(poweruptimer<=0&&!activePowerUp){
             queueManager.addNewPowerUp();
             powerUp = queueManager.realesePowerUp();
             uiController.registerObject(powerUp);
             poweruptimer=(int)(Math.random()*100)+50;
+            activePowerUp=true;
         }
         schachbrett.changeMapArray((int)whiterook.getX(),(int)whiterook.getY(),1);
         schachbrett.changeMapArray((int)blackrook.getX(),(int)blackrook.getY(),2);
@@ -112,6 +116,11 @@ public class ProgramController {
             uiController.removeObject(blackrook);
             uiController.removeObject(blackking);
         }
+
+        collisionPowerUP(whiterook);
+        collisionPowerUP(whiteking);
+        collisionPowerUP(blackrook);
+        collisionPowerUP(blackking);
     }
 
     private void collision(GraphicalObject object1,GraphicalObject object2){
@@ -125,5 +134,47 @@ public class ProgramController {
             object1.setX(-200);
         }
     }
+
+    public void collisionPowerUP(GraphicalObject object1){
+        if(object1.getX()==powerUp.getX()&&object1.getY()==powerUp.getY()){
+            if(powerUp.getType().equals("freeze")){
+                if(schachbrett.getWmoved()){
+                    schachbrett.setWmoved(false);
+                    schachbrett.setBmoved(true);
+                    uiController.removeObject(powerUp);
+                    powerUp.setX(-2000);
+                    activePowerUp=false;
+                }else{
+                    schachbrett.setWmoved(true);
+                    schachbrett.setBmoved(false);
+                    uiController.removeObject(powerUp);
+                    powerUp.setX(-2000);
+                    activePowerUp=false;
+                }
+            }else if(powerUp.getType().equals("swap")){
+                if(schachbrett.getWmoved()){
+                    swap(whiteking,whiterook);
+                    uiController.removeObject(powerUp);
+                    powerUp.setX(-2000);
+                    activePowerUp=false;
+                }else {
+                    swap(blackking,blackrook);
+                    uiController.removeObject(powerUp);
+                    powerUp.setX(-2000);
+                    activePowerUp=false;
+                }
+            }
+        }
+    }
+    public void swap(GraphicalObject object1,GraphicalObject object2){
+        double helpX;
+        double helpY;
+        helpX = object2.getX();
+        helpY = object2.getY();
+        object2.setX(object1.getX());
+        object2.setY(object1.getY());
+        object1.setX(helpX);
+        object1.setY(helpY);
+        }
 
 }

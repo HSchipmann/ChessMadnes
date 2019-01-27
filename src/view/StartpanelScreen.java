@@ -20,7 +20,7 @@ public class StartpanelScreen extends JFrame {
         add(Startpanel);
         setTitle("ChessMadnes");
         setSize(400,250);
-        setVisible(true);
+        setVisible(false);
         setDefaultCloseOperation(0);
         setResizable(false);
         setAlwaysOnTop(true);
