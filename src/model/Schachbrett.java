@@ -1,6 +1,5 @@
 package model;
 
-import akkgframework.model.abitur.datenstrukturen.Graph;
 import akkgframework.model.fundamental.GraphicalObject;
 import akkgframework.model.fundamental.Tileset;
 import akkgframework.view.DrawTool;
@@ -19,7 +18,7 @@ public class Schachbrett extends GraphicalObject {
         //tileset benutzen um Bild einfach zu zeichnen
         mapArray=new int[6][6];
         createMapArray();
-        createAndSetNewImage("src/assets/Tilefertig.png");
+        createAndSetNewImage("assets/board.Tilefertig.png");
         changeMapArray(450,235);
         System.out.println(mapArray[1][1]);
 
