@@ -21,7 +21,7 @@ public class HighscorePanel extends JFrame {
         setResizable(false);
         setAlwaysOnTop(true);
         setLocation(1150,30);
-        ReadFile rF = new ReadFile("src/assets/HighscoreFile.txt");
-        highscoreLabel.setText(""+rF.numberOfLines);
+        //ReadFile rF = new ReadFile("src/assets/HighscoreFile.txt");
+        highscoreLabel.setText("");
     }
 }

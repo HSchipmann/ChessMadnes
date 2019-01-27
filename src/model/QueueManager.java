@@ -7,9 +7,13 @@ public class QueueManager {
     private PowerUp powerUp;
     private Queue<PowerUp> powerUpQueue;
 
+    public QueueManager(){
+        powerUpQueue = new Queue<>();
+    }
+
     //fügt ein neues random PowerUp in die Queue
     public String addNewPowerUp(){
-        PowerUp powerUp = new PowerUp();
+        powerUp = new PowerUp();
         powerUpQueue.enqueue(powerUp);
         System.out.println("Neues PowerUp hinzugefügt");
         return powerUp.getImage();

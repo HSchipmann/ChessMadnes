@@ -14,7 +14,6 @@ public class StartpanelScreen extends JFrame {
     private JTextArea Player1Name;
     private JPanel Startpanel;
     private JTextArea Player2Name;
-    private SchachbrettPanel schachbrettPanel;
     private DrawFrame drawFrame;
 
     public StartpanelScreen(){
@@ -31,7 +30,7 @@ public class StartpanelScreen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                HighscorePanel myGuiForm = new HighscorePanel();
+                //HighscorePanel myGuiForm = new HighscorePanel();
                 /*schachbrettPanel.player1Label.setText(Player1Name.getText());
                 schachbrettPanel.player2Label.setText(Player2Name.getText());
                 SchachbrettPanel schachbrettPanel = new SchachbrettPanel();*/

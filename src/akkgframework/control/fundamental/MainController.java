@@ -1,9 +1,7 @@
 package akkgframework.control.fundamental;
 
-import akkgframework.control.fundamental.UIController;
 import control.Config;
 import akkgframework.view.DrawFrame;
-import view.SchachbrettPanel;
 
 import java.awt.*;
 

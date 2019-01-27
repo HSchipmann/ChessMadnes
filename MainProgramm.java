@@ -18,7 +18,7 @@ public class MainProgramm {
     //falls was schief läuft ist try...catch da, um eine passende error Naricht zu senden.
     public static void main(String[] args) throws IOException {
         new MainView(new MainController());
-        ReadFile rf = new ReadFile("src/assets/HighscoreFile.txt");
+        /*ReadFile rf = new ReadFile("src/assets/HighscoreFile.txt");
         Highscore wF = new Highscore("src/assets/HighscoreFile.txt");
         String filename = "src/assets/HighscoreFile.txt";
         try {
@@ -32,9 +32,9 @@ public class MainProgramm {
         catch (IOException e){
             System.out.println("Nohing here, mate.");
         }
-        wF data = new wF(filename,true);
+        /*wF data = new wF(filename,true);
         Highscore.writeToFile(""+);
-        System.out.println("Score Written To");
+        System.out.println("Score Written To");*/
 
     }
 }

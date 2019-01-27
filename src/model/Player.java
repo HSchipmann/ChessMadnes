@@ -14,9 +14,10 @@ public class Player extends GraphicalObject {
 
 
     //Methoden
-    public Player(String name){
+    public Player(String name,int x,int y){
         myName = name;
-
+        this.x=x;
+        this.y=y;
     }
 
     public String getMyName() {
@@ -28,6 +29,7 @@ public class Player extends GraphicalObject {
     }
 
     public void draw(DrawTool drawTool){
+        drawTool.setCurrentColor(255,255,255,255);
         drawTool.drawText(x,y,myName);
     }
 }
