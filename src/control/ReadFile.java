@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 
 public class ReadFile {
-    private String path;
+    public String path;
 
     public ReadFile(String filepath){
         //Path == Name des Dokuments
@@ -35,8 +35,8 @@ public class ReadFile {
         FileReader fileToRead = new FileReader(path);
         BufferedReader bf = new BufferedReader(fileToRead);
 
-        String aLine;
-        int numberOfLines = 0;
+        int aLine;
+        String numberOfLines = null;
         //Loop der jede Line im doc absucht.
         while ((aLine = bf.readLine()) != null){
             numberOfLines++;

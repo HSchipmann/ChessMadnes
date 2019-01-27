@@ -1,17 +1,19 @@
 package view;
 import akkgframework.view.DrawFrame;
 import control.ReadFile;
+import model.Highscore;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.nio.file.Path;
 
 public class HighscorePanel extends JFrame {
-    private JPanel HighscorePanel;
-    private JLabel HighscoreLabel;
+    private JPanel highscorePanel;
+    private JLabel highscoreLabel;
 
     public HighscorePanel () {
-        add(HighscorePanel);
+        add(highscorePanel);
         setTitle("ChessMadnes");
         setSize(80,740);
         setVisible(true);
@@ -19,6 +21,7 @@ public class HighscorePanel extends JFrame {
         setResizable(false);
         setAlwaysOnTop(true);
         setLocation(1150,30);
-        HighscoreLabel.setText(ReadFile.readLines());
+        ReadFile rF = new ReadFile("src/assets/HighscoreFile.txt");
+        highscoreLabel.setText(""+rF.numberOfLines);
     }
 }

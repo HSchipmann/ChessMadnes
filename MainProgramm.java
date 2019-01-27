@@ -1,6 +1,9 @@
 package model;
 
 import akkgframework.control.fundamental.MainController;
+import akkgframework.model.abitur.datenstrukturen.List;
+import control.HighscoreCon;
+import control.ReadFile;
 import model.Highscore;
 import view.MainView;
 import view.StartpanelScreen;
@@ -15,7 +18,9 @@ public class MainProgramm {
     //falls was schief läuft ist try...catch da, um eine passende error Naricht zu senden.
     public static void main(String[] args) throws IOException {
         new MainView(new MainController());
-        /*String filename = "C:/test.txt";
+        ReadFile rf = new ReadFile("src/assets/HighscoreFile.txt");
+        Highscore wF = new Highscore("src/assets/HighscoreFile.txt");
+        String filename = "src/assets/HighscoreFile.txt";
         try {
             ReadFile file = new ReadFile(filename);
             String[] aryLines = file.OpenFile();
@@ -27,9 +32,9 @@ public class MainProgramm {
         catch (IOException e){
             System.out.println("Nohing here, mate.");
         }
-        WriteFile data = new WriteFile(filename,true);
+        wF data = new wF(filename,true);
         Highscore.writeToFile(""+);
         System.out.println("Score Written To");
-        */
+
     }
 }
